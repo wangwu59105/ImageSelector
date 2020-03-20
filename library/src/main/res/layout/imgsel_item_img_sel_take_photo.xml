@@ -18,6 +18,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/ivTakePhoto"
         android:layout_centerHorizontal="true"
-        android:text="@string/takephoto" />
+        android:text="@string/imgsel_takephoto" />
 
 </com.yuyh.library.imgsel.widget.SquareRelativeLayout>

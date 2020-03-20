@@ -105,7 +105,7 @@ public class ISCameraActivity extends AppCompatActivity {
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri); //Uri.fromFile(tempFile)
             startActivityForResult(cameraIntent, REQUEST_CAMERA);
         } else {
-            Toast.makeText(this, getResources().getString(R.string.open_camera_failure), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getResources().getString(R.string.imgsel_open_camera_failure), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -200,7 +200,7 @@ public class ISCameraActivity extends AppCompatActivity {
                 if (grantResults.length >= 2 && grantResults[0] == PackageManager.PERMISSION_GRANTED && grantResults[1] == PackageManager.PERMISSION_GRANTED) {
                     camera();
                 } else {
-                    Toast.makeText(this, getResources().getString(R.string.permission_camera_denied), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getResources().getString(R.string.imgsel_permission_camera_denied), Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:

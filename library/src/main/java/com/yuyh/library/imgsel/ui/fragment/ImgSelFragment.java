@@ -97,7 +97,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_img_sel, container, false);
+        View view = inflater.inflate(R.layout.imgsel_fragment_img_sel, container, false);
         rvImageList = view.findViewById(R.id.rvImageList);
         btnAlbumSelected = view.findViewById(R.id.btnAlbumSelected);
         btnAlbumSelected.setOnClickListener(this);
@@ -195,7 +195,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
                 }
             } else {
                 if (config.maxNum <= Constant.imageList.size()) {
-                    Toast.makeText(getActivity(), String.format(getString(R.string.maxnum), config.maxNum), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), String.format(getString(R.string.imgsel_maxnum), config.maxNum), Toast.LENGTH_SHORT).show();
                     return 0;
                 }
 
@@ -293,7 +293,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
 
     private void createPopupFolderList(int width, int height) {
         folderPopupWindow = new ListPopupWindow(getActivity());
-        folderPopupWindow.setAnimationStyle(R.style.PopupAnimBottom);
+        folderPopupWindow.setAnimationStyle(R.style.Imgsel_PopupAnimBottom);
         folderPopupWindow.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         folderPopupWindow.setAdapter(folderListAdapter);
         folderPopupWindow.setContentWidth(width);
@@ -347,7 +347,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
             } else {
                 folderPopupWindow.show();
                 if (folderPopupWindow.getListView() != null) {
-                    folderPopupWindow.getListView().setDivider(new ColorDrawable(ContextCompat.getColor(getActivity(), R.color.bottom_bg)));
+                    folderPopupWindow.getListView().setDivider(new ColorDrawable(ContextCompat.getColor(getActivity(), R.color.imgsel_bottom_bg)));
                 }
                 int index = folderListAdapter.getSelectIndex();
                 index = index == 0 ? index : index - 1;
@@ -376,7 +376,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
     private void showCameraAction() {
 
         if (config.maxNum <= Constant.imageList.size()) {
-            Toast.makeText(getActivity(), String.format(getString(R.string.maxnum), config.maxNum), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), String.format(getString(R.string.imgsel_maxnum), config.maxNum), Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -407,7 +407,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
             cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, uri); //Uri.fromFile(tempFile)
             startActivityForResult(cameraIntent, REQUEST_CAMERA);
         } else {
-            Toast.makeText(getActivity(), getString(R.string.open_camera_failure), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), getString(R.string.imgsel_open_camera_failure), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -437,7 +437,7 @@ public class ImgSelFragment extends Fragment implements View.OnClickListener, Vi
                 if (grantResults.length >= 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     showCameraAction();
                 } else {
-                    Toast.makeText(getActivity(), getString(R.string.permission_camera_denied), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), getString(R.string.imgsel_permission_camera_denied), Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:

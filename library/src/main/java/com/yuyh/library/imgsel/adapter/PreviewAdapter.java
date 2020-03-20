@@ -43,7 +43,7 @@ public class PreviewAdapter extends PagerAdapter {
 
     @Override
     public View instantiateItem(ViewGroup container, final int position) {
-        View root = View.inflate(activity, R.layout.item_pager_img_sel, null);
+        View root = View.inflate(activity, R.layout.imgsel_item_pager_img_sel, null);
         final ImageView photoView = (ImageView) root.findViewById(R.id.ivImage);
         final ImageView ivChecked = (ImageView) root.findViewById(R.id.ivPhotoCheaked);
 
@@ -52,9 +52,9 @@ public class PreviewAdapter extends PagerAdapter {
             ivChecked.setVisibility(View.VISIBLE);
             final Image image = images.get(config.needCamera ? position + 1 : position);
             if (Constant.imageList.contains(image.path)) {
-                ivChecked.setImageResource(R.drawable.ic_checked);
+                ivChecked.setImageResource(R.drawable.imgsel_ic_checked);
             } else {
-                ivChecked.setImageResource(R.drawable.ic_uncheck);
+                ivChecked.setImageResource(R.drawable.imgsel_ic_uncheck);
             }
 
             ivChecked.setOnClickListener(new View.OnClickListener() {
@@ -64,9 +64,9 @@ public class PreviewAdapter extends PagerAdapter {
                         int ret = listener.onCheckedClick(position, image);
                         if (ret == 1) { // 局部刷新
                             if (Constant.imageList.contains(image.path)) {
-                                ivChecked.setImageResource(R.drawable.ic_checked);
+                                ivChecked.setImageResource(R.drawable.imgsel_ic_checked);
                             } else {
-                                ivChecked.setImageResource(R.drawable.ic_uncheck);
+                                ivChecked.setImageResource(R.drawable.imgsel_ic_uncheck);
                             }
                         }
                     }

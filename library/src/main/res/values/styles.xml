@@ -1,20 +1,20 @@
 <resources>
 
 
-    <style name="BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Imgsel_BaseAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">#FF4081</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/imgsel_colorPrimaryDark</item>
         <item name="colorAccent">#FF4081</item>
 
     </style>
 
     <!-- Base application theme. -->
-    <style name="SelTheme" parent="@style/BaseAppTheme"></style>
+    <style name="Imgsel_SelTheme" parent="@style/Imgsel_BaseAppTheme"></style>
 
-    <style name="PopupAnimBottom" parent="@android:style/Animation">
+    <style name="Imgsel_PopupAnimBottom" parent="@android:style/Animation">
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowEnterAnimation">@anim/popup_bottom_in</item>
-        <item name="android:windowExitAnimation">@anim/popup_bottom_out</item>
+        <item name="android:windowEnterAnimation">@anim/imgsel_popup_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/imgsel_popup_bottom_out</item>
     </style>
 
 </resources>

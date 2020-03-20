@@ -5,7 +5,7 @@
     <application>
         <activity
             android:name=".ui.ISListActivity"
-            android:theme="@style/SelTheme" />
+            android:theme="@style/Imgsel_SelTheme" />
 
         <activity
             android:name=".ui.ISCameraActivity"
@@ -22,7 +22,7 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/provider_paths" />
+                android:resource="@xml/imgsel_provider_paths" />
         </provider>
     </application>
 

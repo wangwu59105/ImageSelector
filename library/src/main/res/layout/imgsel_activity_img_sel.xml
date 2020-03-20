@@ -9,7 +9,7 @@
         android:id="@+id/rlTitleBar"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="@color/colorPrimary">
+        android:background="@color/imgsel_colorPrimary">
 
         <ImageView
             android:id="@+id/ivBack"
@@ -19,7 +19,7 @@
             android:layout_marginLeft="10dp"
             android:padding="5dp"
             android:scaleType="centerInside"
-            android:src="@drawable/ic_back" />
+            android:src="@drawable/imgsel_ic_back" />
 
         <TextView
             android:id="@+id/tvTitle"

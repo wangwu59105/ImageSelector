@@ -28,7 +28,7 @@ public class FolderListAdapter extends EasyLVAdapter<Folder> {
     private OnFolderChangeListener listener;
 
     public FolderListAdapter(Context context, List<Folder> folderList, ISListConfig config) {
-        super(context, folderList, R.layout.item_img_sel_folder);
+        super(context, folderList, R.layout.imgsel_item_img_sel_folder);
         this.context = context;
         this.folderList = folderList;
         this.config = config;

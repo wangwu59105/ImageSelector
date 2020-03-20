@@ -19,7 +19,7 @@
             android:layout_height="55dp"
             android:contentDescription="@null"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_default_image" />
+            android:src="@drawable/imgsel_ic_default_image" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,7 +56,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_folder_selected" />
+                android:src="@drawable/imgsel_ic_folder_selected" />
 
         </LinearLayout>
 

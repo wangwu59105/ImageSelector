@@ -22,7 +22,7 @@ public class StatusBarCompat {
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static View compat(Activity activity, int statusColor) {
-        int color = ContextCompat.getColor(activity, R.color.colorPrimary);
+        int color = ContextCompat.getColor(activity, R.color.imgsel_colorPrimary);
         if (color == statusColor) {
             compatTransStatusBar(activity, Color.TRANSPARENT);
         } else {

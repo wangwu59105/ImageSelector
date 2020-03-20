@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_default_image" />
+        android:src="@drawable/imgsel_ic_default_image" />
 
     <ImageView
         android:id="@+id/ivPhotoCheaked"
@@ -18,6 +18,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:contentDescription="@null"
-        android:src="@drawable/ic_uncheck" />
+        android:src="@drawable/imgsel_ic_uncheck" />
 
 </com.yuyh.library.imgsel.widget.SquareRelativeLayout>

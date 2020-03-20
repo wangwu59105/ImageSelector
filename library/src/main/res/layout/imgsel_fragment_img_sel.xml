@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_alignParentBottom="true"
-            android:background="@color/bottom_bg"
+            android:background="@color/imgsel_bottom_bg"
             android:clickable="true">
 
             <Button
@@ -27,7 +27,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:background="@null"
-                android:drawableRight="@drawable/ic_album"
+                android:drawableRight="@drawable/imgsel_ic_album"
                 android:drawablePadding="5dp"
                 android:ellipsize="end"
                 android:gravity="center_vertical"

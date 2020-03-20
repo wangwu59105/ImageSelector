@@ -29,7 +29,7 @@ public class ImageListAdapter extends EasyRVAdapter<Image> {
     private OnItemClickListener listener;
 
     public ImageListAdapter(Context context, List<Image> list, ISListConfig config) {
-        super(context, list, R.layout.item_img_sel, R.layout.item_img_sel_take_photo);
+        super(context, list, R.layout.imgsel_item_img_sel, R.layout.imgsel_item_img_sel_take_photo);
         this.context = context;
         this.config = config;
     }
@@ -39,7 +39,7 @@ public class ImageListAdapter extends EasyRVAdapter<Image> {
 
         if (position == 0 && showCamera) {
             ImageView iv = viewHolder.getView(R.id.ivTakePhoto);
-            iv.setImageResource(R.drawable.ic_take_photo);
+            iv.setImageResource(R.drawable.imgsel_ic_take_photo);
             iv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -58,9 +58,9 @@ public class ImageListAdapter extends EasyRVAdapter<Image> {
                         int ret = listener.onCheckedClick(position, item);
                         if (ret == 1) { // 局部刷新
                             if (Constant.imageList.contains(item.path)) {
-                                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.ic_checked);
+                                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.imgsel_ic_checked);
                             } else {
-                                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.ic_uncheck);
+                                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.imgsel_ic_uncheck);
                             }
                         }
                     }
@@ -82,9 +82,9 @@ public class ImageListAdapter extends EasyRVAdapter<Image> {
         if (mutiSelect) {
             viewHolder.setVisible(R.id.ivPhotoCheaked, true);
             if (Constant.imageList.contains(item.path)) {
-                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.ic_checked);
+                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.imgsel_ic_checked);
             } else {
-                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.ic_uncheck);
+                viewHolder.setImageResource(R.id.ivPhotoCheaked, R.drawable.imgsel_ic_uncheck);
             }
         } else {
             viewHolder.setVisible(R.id.ivPhotoCheaked, false);

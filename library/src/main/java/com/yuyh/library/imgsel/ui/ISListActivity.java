@@ -82,7 +82,7 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_img_sel);
+        setContentView(R.layout.imgsel_activity_img_sel);
 
         config = (ISListConfig) getIntent().getSerializableExtra("config");
 
@@ -100,7 +100,7 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
 
         initView();
         if (!FileUtils.isSdCardAvailable()) {
-            Toast.makeText(this, getString(R.string.sd_disable), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.imgsel_sd_disable), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -137,7 +137,7 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
                 if (!config.rememberSelected) {
                     Constant.imageList.clear();
                 }
-                btnConfirm.setText(String.format(getString(R.string.confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
+                btnConfirm.setText(String.format(getString(R.string.imgsel_confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
             } else {
                 Constant.imageList.clear();
                 btnConfirm.setVisibility(View.GONE);
@@ -152,7 +152,7 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
             if (Constant.imageList != null && !Constant.imageList.isEmpty()) {
                 exit();
             } else {
-                Toast.makeText(this, getString(R.string.minnum), Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.imgsel_minnum), Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.ivBack) {
             onBackPressed();
@@ -171,12 +171,12 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onImageSelected(String path) {
-        btnConfirm.setText(String.format(getString(R.string.confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
+        btnConfirm.setText(String.format(getString(R.string.imgsel_confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
     }
 
     @Override
     public void onImageUnselected(String path) {
-        btnConfirm.setText(String.format(getString(R.string.confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
+        btnConfirm.setText(String.format(getString(R.string.imgsel_confirm_format), config.btnText, Constant.imageList.size(), config.maxNum));
     }
 
     @Override
@@ -285,7 +285,7 @@ public class ISListActivity extends AppCompatActivity implements View.OnClickLis
                             .add(R.id.fmImageList, ImgSelFragment.instance(), null)
                             .commitAllowingStateLoss();
                 } else {
-                    Toast.makeText(this, getString(R.string.permission_storage_denied), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, getString(R.string.imgsel_permission_storage_denied), Toast.LENGTH_SHORT).show();
                 }
                 break;
             default:
